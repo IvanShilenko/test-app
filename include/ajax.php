@@ -3,6 +3,7 @@ require_once dirname($_SERVER['SCRIPT_FILENAME']).'/config.php';
 require_once dirname($_SERVER['SCRIPT_FILENAME']).'/base.php';
 require_once dirname($_SERVER['SCRIPT_FILENAME']).'/mysql.php';
 
+
 $method = $_GET['action'];
 if(@function_exists($method)) $result = $method();
    else $result = array('status'=>'error','text'=>'error method');
